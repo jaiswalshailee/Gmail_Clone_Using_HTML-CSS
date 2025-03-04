@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail clone using HTML and CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=label_important" />
+</head>
+<body>
+    
+    <header>
+        <div class="Left logo">
+            <span id="menu" class="material-icons mainmenu">menu</span>
+            <img class="GmailLogo" src="./assets/logo_gmail_.png" alt="">
+        </div>
+        <div class="search-area">
+            <div class="search box">
+                <span class="material-icons "> search </span>
+                <input id="Search-input" type="text" placeholder="Search Mail" />
+                <span class="material-icons"> tune </span>
+            </div>
+        </div>
+       
+        <div class="right icons">
+            <span class="material-icons">help</span>
+            <span class="material-icons">settings</span>
+            <img id="star-img"  src="./assets/star (1).png" alt="">
+            <span class="material-icons">apps</span>
+            <span class="material-icons">account_circle</span>
+
+        </div>
+    </header>
+    <!-- <hr> -->
+    <main>
+        <div class="sidebar">
+            <button class="button-compose">
+                <span class="material-icons">edit</span>
+                Compose
+            </button>
+            <div class="sidebarOptions sidebarOptions-active">
+                <a class="sidebaroptions-icon">
+                    <img id="sidebaricons" src="./assets/inbox_baseline_nv700_20dp.png" alt="">
+                    <h3 id="bold-font"  class="font">Inbox</h3>
+                 </a>
+            </div>
+            <div class="sidebarOptions">
+                <a class="sidebaroptions-icon">
+                    <img id="sidebaricons" src="./assets/star_baseline_nv700_20dp.png" alt="">
+                    <span class="font">Starred</span>
+                </a>
+            </div>
+            <div class="sidebarOptions">
+                <a class="sidebaroptions-icon">
+                    <img id="sidebaricons" src="./assets/schedule_baseline_nv700_20dp.png" alt="">
+                    <span class="font">Snoozed</span>
+                </a>
+            </div>
+            <div class="sidebarOptions">
+                <a class="sidebaroptions-icon">
+                    <img id="sidebaricons" src="./assets/label_important_baseline_nv700_20dp.png" alt="">
+                    <span class="font">Important</span>
+                </a>
+            </div>
+            <div class="sidebarOptions">
+                <a class="sidebaroptions-icon">
+                    <img id="sidebaricons" src="./assets/send_baseline_nv700_20dp.png" alt="">
+                    <span class="font">Sent</span>
+                </a>
+            </div>
+            <div class="sidebarOptions">
+                <a class="sidebaroptions-icon">
+                    <img id="sidebaricons" src="./assets/draft_baseline_nv700_20dp.png" alt="">
+                    <span id="bold-font"  class="font">Drafts</span>
+                </a>
+            </div>
+            <div class="sidebarOptions">
+                <a class="sidebaroptions-icon">
+                    <img id="sidebaricons" src="./assets/label_important_baseline_nv700_20dp.png" alt="">
+                    <span id="bold-font"  class="font">Categories</span>
+                </a>
+            </div>
+            <div class="sidebarOptions">
+                <a class="sidebaroptions-icon">
+                    <i id="sidebaricons-more"  class="material-icons">keyboard_arrow_down</i>
+                    <span class="font-more">More</span>
+                </a>
+            </div>
+           <div class="label">
+                <span class="font-label">Labels</span>
+                <i class="material-icons material-icons-add">add</i>
+           </div>
+        </div>
+        <div class="email-content">
+            <div class="email-content-bar">
+                <div class="left-bar">
+                    <span id="bar-icons"  class="material-icons ">check_box_outline_blank</span>
+                    <span id="bar-icons"  class="material-icons ">arrow_drop_down</span>
+                    <span id="bar-icons"  class="material-icons ">refresh</span>
+                    <span id="bar-icons"  class="material-icons "> more_vert</span>
+                </div>
+                <div class="right-bar">
+                    <button id="button-bar"   class="bar-NoOfemails">1-50 of 9149</button>
+                    <span id="bar-icons-arrow"  class="material-icons ">arrow_forward_ios</span>
+                    <span id="bar-icons-arrow"  class="material-icons ">arrow_back_ios</span>
+                </div>
+            </div>
+            <div class="heading">
+                <div class="heading-sect">
+                    <div class="email-heading">
+                        <div class="email-heading-sec sec1">
+                            <a class="icon">
+                                <img id="inbox-img" src="./assets/inbox_baseline_nv700_20dp.png" alt="">
+                                <h3 class="font-heading">Primary</h3>
+                            </a>
+                        </div>
+                        <div class="email-heading-sec sec2">
+                            <a class="icon">
+                                <img id="tag-img" src="./assets/tag.png" alt="">
+                                <h3 class="font-heading">Promotions</h3>
+                            </a>
+                        </div>
+                        <div class="email-heading-sec sec3">
+                            <a class="icon">
+                                <img id="group-img" src="./assets/group.png" alt="">
+                                <h3 class="font-heading">Social</h3>
+                                <button class="new">1 new</button>
+                            </a>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 1 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input  id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Uber</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    Shailee, you have a promo🎉
+                                    <span class="emailRow__description"> -Save 20% on your next 1 trips this week —whether it's a big night out or a quick, morning comm..</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">10:00 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 2 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Youtube </h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    You Got a New Subscriber
+                                    <span class="emailRow__description"> - on Your Future channel coders</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">5:30 AM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 3 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Glassdoor Jobs</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    I can refer to Accenture, Kindly like the post and DM your skill set..
+                                    <span class="emailRow__description"> - Hey Hijok! Catch up the latest...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">9:40 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 4 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Zomato</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    You might already know this but...
+                                    <span class="emailRow__description"> - This isn't about food, if you think you're spiraling around your...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">11:09 pm</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 5 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Eduskills</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    Attend the live segment of Python workshop
+                                    <span class="emailRow__description"> - Attend the live segment of Python workshop...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">1:05 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 6 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON"  class="material-icons"> star_border </span>
+                                <span id="emailrowICON"  class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Kaggle</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    Introducing Kaggle packages-Enhance Your MLOps Skills in the Drawing wit....
+                                    <span class="emailRow__description"> -Hi Shailee_Jais,Starting today, you can use ...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">5:50 AM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 7 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Slack</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    Slack confirmation code: ONE-TSG
+                                    <span class="emailRow__description"> - Your confirmation code is below — enter it in your o....</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">6:09 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 8 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Linkedn</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    New 30+ job updates "remote working PAN India Locations"
+                                    <span class="emailRow__description"> - View jobs in india...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">10:00 AM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 9 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Malwarebytes</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    How AI was used in a phishing campaign targeting Gmail users
+                                    <span class="emailRow__description"> - How AI was used in a phishing campaign tar...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">3:08 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 10 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span  id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Spotify</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    Your 4 months of Spotify Premium for ₹119 is waiting
+                                    <span class="emailRow__description"> - Download all the best albums and playlists to bring the vibe...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">7:00 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 11 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Google Cloud</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    Building a secure and agile future in the cloud
+                                    <span class="emailRow__description"> - Hi Shailee,As you embrace the power of generativ...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">3:07 AM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 12 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input  id="emailrowICON" type="checkbox" name="" id="" />
+                                <span  id="emailrowICON" class="material-icons"> star_border </span>
+                                <span  id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Zomato</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    RIP (Roast of India Pakistan rivalry)
+                                    <span class="emailRow__description"> - With 5-one sided wins...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">8:40 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 13 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input  id="emailrowICON" type="checkbox" name="" id="" />
+                                <span  id="emailrowICON" class="material-icons"> star_border </span>
+                                <span  id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Swiggy</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    🏏💙🏏💙🏏💙🏏💙🏏💙
+                                    <span class="emailRow__description"> - Be quicker than Rishabh Pant on a run and scor...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">2:00 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 14 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input  id="emailrowICON" type="checkbox" name="" id="" />
+                                <span  id="emailrowICON" class="material-icons"> star_border </span>
+                                <span  id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Google Cloud</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    Fueling generative AI with data: Insights that drive innovation
+                                    <span class="emailRow__description"> - Hi Shailee,While generative AI holds incredible potential for businesses....</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">9:30 AM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 15 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Quora Digest</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    At AIIMS, what is the fee structure per annum?
+                                    <span class="emailRow__description"> - At AIIMS, what is the fee structure per annum?...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">5:30 AM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 16 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Kickresume</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    We're all seeing ghosts... right?
+                                    <span class="emailRow__description"> - Hi! I'm Peter, CEO of Kickresume, and these career-r...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">8:07 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 17 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Swiggy</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    We found a perfect match! 💘
+                                    <span class="emailRow__description"> - Its YOU and Savings...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">11:05 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 18 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Github</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    [GitHub] A first-party GitHub OAuth application has been added to your account
+
+                                    <span class="emailRow__description"> -A first-party GitHub OAuth applic...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">11:05 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                     <!-- 19 -->
+                     <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Quora Digest</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    My HR manager asked me to resign. When I refused, he handed me a termination letter, ...?
+                                    <span class="emailRow__description"> - My HR manager asked me to resign. ...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">9:30 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                     <!-- 20 -->
+                     <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Swiggy</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    User, your order has arrived. 🍕
+                                    <span class="emailRow__description"> -What don't know we are talking about?ohh you gonna love this...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">2:00 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                     <!-- 21 -->
+                     <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span  id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Zomato</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    Get a FREE ring from Zomato 💍
+                                    <span class="emailRow__description"> - We got you special something...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">10:50 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- 22 -->
+                    <div class="email-list">
+                        <div class="email-row">
+                            <div class="emailRow-options">
+                                <input id="emailrowICON" type="checkbox" name="" id="" />
+                                <span id="emailrowICON" class="material-icons"> star_border </span>
+                                <span id="emailrowICON" class="material-symbols-outlined"> label_important </span>   
+                            </div>
+                            <h3 class="emailrow-title">Discord</h3>
+                            <div class="emailrow-message">
+                                <h4>
+                                    Welcome to Discord!!
+                                    <span class="emailRow__description"> - You've just entered the upper atmosphere of Discord, a...</span>
+                                  </h4>
+                            </div>
+                            <p class="emailRow__time">10:50 PM</p>
+                        </div>
+                    </div>
+                    <hr>
+                   
+                    
+
+                </div> 
+            </div>
+   
+        </div>
+        
+    </main>
+    
+</body>
+</html>
